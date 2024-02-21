@@ -1,0 +1,25 @@
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.paragraph > * + * {
+  margin-block-start: 1.5rem;
+}
+
+@media (min-width: 768px) and (not (orientation: portrait)) {
+  .shrinked-paragraph {
+    width: 70%;
+  }
+}

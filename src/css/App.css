@@ -1,3 +1,55 @@
+body {
+  font-size: max(1.15vmax, 12pt);
+}
 .map {
   position: fixed;
+}
+
+.leaflet-small-label {
+  width: max-content;
+}
+
+.leaflet-small-label-inner {
+  font-size: 12px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.leaflet-big-label {
+  width: max-content;
+}
+
+.leaflet-big-label-inner {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14pt;
+  transform: translate(-50%, -50%);
+  color: #878787;
+  font-weight: 700;
+}
+
+.leaflet-sight {
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 11pt;
+}
+
+.leaflet-sight > img {
+  width: min(100%, 20vw) !important;
+}
+/*
+.leaflet-zoom-anim
+.leaflet-zoom-animated {
+  transition-timing-function: ease-out;
+  transition-duration: 150ms;
+}
+*/
+
+img {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }

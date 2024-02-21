@@ -1,0 +1,27 @@
+.flip-exit > div {
+  transform: rotateY(0deg);
+}
+
+.flip-exit-active > div {
+  transform: rotateY(180deg);
+  transition: transform 300ms;
+  transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.flip-exit-done > div {
+  transform: rotateY(180deg);
+}
+
+.flip-enter > div {
+  transform: rotateY(180deg);
+}
+
+.flip-enter-active > div {
+  transform: rotateY(0deg);
+  transition: transform 300ms;
+  transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.flip-enter-done > div {
+  transform: rotateY(0deg);
+}

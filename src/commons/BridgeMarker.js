@@ -1,39 +1,38 @@
 import L from "leaflet";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, createContext } from "react";
 import { Marker } from "react-leaflet";
 import { bridges } from "../js/bridges";
-import QuestionModal from "../questions/QuestionModal";
+import CardModal from "../lib/card/CardModal";
+import markerYellowIcon from "../img/yellow-marker.png";
+import markerRedIcon from "../img/red-marker.png";
 
-function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
+function BridgeMarker({ position, children, checkFinish }) {
   const LeafIcon = L.Icon.extend({
-    options: {},
+    options: {
+      iconSize: [33, 47],
+      iconAnchor: [33 / 2, 47],
+    },
   });
 
   const blueIcon = new LeafIcon({
-      iconUrl:
-        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF",
-    }),
-    greenIcon = new LeafIcon({
-      iconUrl:
-        "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|2ecc71&chf=a,s,ee00FFFF",
-    });
+    iconUrl: markerRedIcon,
+  });
 
-  let icon = localStorage.getItem("bridge" + position) ? greenIcon : blueIcon;
+  const greenIcon = new LeafIcon({
+    iconUrl: markerYellowIcon,
+  });
+
+  const [icon, setIcon] = useState(
+    localStorage.getItem(JSON.stringify(position)) ? greenIcon : blueIcon,
+  );
 
   const [showModal, setShowModal] = useState(false);
 
-  const handleClick = () => {
-    if (localStorage.getItem("bridge" + position)) {
-      return;
-    }
-    setShowModal(true);
-  };
-
   const onQuestionSolved = () => {
-    localStorage.setItem("bridge" + position, "true");
-    icon = greenIcon;
-    setShowModal(false);
-    upperOnQuestionSolved();
+    setIcon(
+      localStorage.getItem(JSON.stringify(position)) ? greenIcon : blueIcon,
+    );
+    setTimeout(checkFinish, 500);
   };
 
   return (
@@ -41,29 +40,28 @@ function BridgeMarker({ position, overlayComponent, upperOnQuestionSolved }) {
       <Marker
         className="marker"
         position={position}
-        eventHandlers={{ click: handleClick }}
+        eventHandlers={{ click: () => setShowModal(true) }}
         icon={icon}
       ></Marker>
-      <QuestionModal
-        overlayComponent={overlayComponent}
+      <CardModal
         showModal={showModal}
         setShowModal={setShowModal}
         onQuestionSolved={onQuestionSolved}
-      />
+      >
+        {children}
+      </CardModal>
     </Fragment>
   );
 }
 
-function BridgeMarkerList({ upperOnQuestionSolved }) {
+function BridgeMarkerList({ checkFinish }) {
   return (
     <ul>
-      {bridges.map((bridge) => (
-        <li key={bridge.position}>
-          <BridgeMarker
-            position={bridge.position}
-            overlayComponent={bridge.overlayComponent}
-            upperOnQuestionSolved={upperOnQuestionSolved}
-          />
+      {bridges.map((bridge, idx) => (
+        <li key={idx}>
+          <BridgeMarker position={bridge.position} checkFinish={checkFinish}>
+            {bridge.overlayComponent}
+          </BridgeMarker>
         </li>
       ))}
     </ul>
