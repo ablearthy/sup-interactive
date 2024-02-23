@@ -4,7 +4,7 @@ import { ImageOverlay, MapContainer, useMap } from "react-leaflet";
 import React, { useState } from "react";
 import BridgeMarkerList from "../commons/BridgeMarker";
 import NearestMarker from "../commons/NearestMarker";
-// import L from "leaflet";
+import L from "leaflet";
 import WelcomeScreen from "../components/WelcomeScreen";
 import FinishScreen from "../components/FinishScreen";
 import { bridges } from "./bridges";
@@ -29,16 +29,31 @@ function App() {
 
   function MapSettings() {
     const map = useMap();
-    // var popup = L.popup();
 
-    // function onMapClick(e) {
-    //   popup
-    //     .setLatLng(e.latlng)
-    //     .setContent("You clicked the map at " + e.latlng.toString())
-    //     .openOn(map);
-    // }
+    const maxScreenDimension =
+      window.innerHeight > window.innerWidth
+        ? window.innerHeight
+        : window.innerWidth;
+    const zoom =
+      maxScreenDimension < 1000
+        ? 13.5
+        : map.getBoundsZoom(config.mapContainer.bounds, true);
 
-    // map.on('click', onMapClick);
+    map.setZoom(zoom);
+    map.setMinZoom(zoom);
+    map.setMaxZoom(zoom + 2);
+
+    var popup = L.popup();
+
+    function onMapClick(e) {
+      popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+      console.log(e.latlng);
+    }
+
+    map.on("click", onMapClick);
     const zsh = new ZoomShowHide();
     zsh.addTo(map);
 
@@ -51,11 +66,11 @@ function App() {
 
   return (
     <>
-      <WelcomeScreen />
+      {/* <WelcomeScreen /> */}
       {showFinishScreen && <FinishScreen />}
       <MapContainer
         className="map"
-        style={{ height: "100vh", width: "100%" }}
+        style={{ minHeight: "100%", height: "100%", width: "100%" }}
         {...config.mapContainer}
       >
         <MapSettings />
