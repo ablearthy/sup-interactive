@@ -29,8 +29,9 @@ function QuestionBackCard({
   const ctx = useContext(CardModalContext);
 
   const wrongAnswerBackContent = (
-    <div className={styles["content"]}>
-      Неверно! Попробуйте ещё раз или воспользуйтесь подсказкой!
+    <div className={styles["back-content"]}>
+      <p>Неверно! Попробуйте ещё раз или воспользуйтесь подсказкой!</p>
+      <Button>Ещё раз!</Button>
     </div>
   );
 

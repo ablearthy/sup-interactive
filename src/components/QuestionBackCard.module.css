@@ -3,11 +3,16 @@
   composes: noselect from "lib/commons.module.css";
 }
 
+.back-content,
 .content {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: self-start;
+}
+
+.back-content > * + * {
+  margin-top: 1rem;
 }
 
 .good-subheading {
@@ -45,6 +50,7 @@
 .sidebar-extra-images {
   gap: 0.5rem;
 }
+
 .sidebar-extra-images img,
 .sidebar img {
   height: 100%;
