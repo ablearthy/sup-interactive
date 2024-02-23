@@ -43,17 +43,6 @@ function App() {
     map.setMinZoom(zoom);
     map.setMaxZoom(zoom + 2);
 
-    var popup = L.popup();
-
-    function onMapClick(e) {
-      popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
-      console.log(e.latlng);
-    }
-
-    map.on("click", onMapClick);
     const zsh = new ZoomShowHide();
     zsh.addTo(map);
 
