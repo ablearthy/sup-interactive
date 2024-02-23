@@ -3,8 +3,9 @@ import { QuestionLayoutContext } from "./QuestionLayout";
 import Button from "lib/Button";
 import styles from "./Question1.module.css";
 import { useContext } from "react";
+import CardHint from "./CardHint";
 
-function Question12() {
+function Question12({ hint }) {
   const options = [
     ["17 836 000", true],
     ["25 480 000", false],
@@ -48,6 +49,7 @@ function Question12() {
           );
         })}
       </div>
+      <CardHint hint={hint} />
       <Button
         className={styles["submit-button"]}
         onClick={() =>

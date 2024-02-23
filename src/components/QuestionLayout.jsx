@@ -11,6 +11,7 @@ import { CardModalContext } from "lib/card/CardModal";
 import CardHint from "./CardHint";
 
 export const QuestionLayoutContext = createContext(null);
+export const QuestionInfoContext = createContext(null);
 
 export function QuestionLayout({
   title,
@@ -43,15 +44,18 @@ export function QuestionLayout({
 
   const front = customFront || (
     <QuestionCardLayout>
-      <ContentGridLayout
-        title={
-          <div className={styles["heading"]}>
-            <FancyHeader className={styles["title"]} text={title} />
-            <CardHint hint={hint} />
-          </div>
-        }
-        content={children}
-      />
+      <QuestionInfoContext.Provider value={{
+        hint: hint
+      }}>
+        <ContentGridLayout
+          title={
+            <div className={styles["heading"]}>
+              <FancyHeader className={styles["title"]} text={title} />
+            </div>
+          }
+          content={children}
+        />
+      </QuestionInfoContext.Provider>
     </QuestionCardLayout>
   );
 

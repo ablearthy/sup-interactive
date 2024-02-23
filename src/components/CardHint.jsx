@@ -12,7 +12,7 @@ function CardHint({ hint }) {
         onClick={() => setShowHint(true)}
         className={styles["hint-button"]}
       >
-        ?
+        Подсказка
       </Button>
       <Modal
         className={styles["modal"]}

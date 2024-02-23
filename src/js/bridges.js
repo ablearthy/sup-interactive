@@ -79,7 +79,7 @@ export const bridges = [
           </>
         }
       >
-        <Question1 />
+        <Question1 hint="2 насаждения относятся к одному замку, но носят 2 разных его названия" />
       </QuestionLayout>
     ),
   },
@@ -248,7 +248,7 @@ export const bridges = [
           </>
         }
       >
-        <Question6 />
+        <Question6 hint="Емельян Пугачев — оппозиционер власти" />
       </QuestionLayout>
     ),
   },
@@ -420,7 +420,7 @@ export const bridges = [
           </div>
         }
       >
-        <Question11 />
+        <Question11 hint="обладательница записки довольно бескорыстна" />
       </QuestionLayout>
     ),
   },
@@ -450,7 +450,7 @@ export const bridges = [
           </>
         }
       >
-        <Question12 />
+        <Question12 hint="49 рублей" />
       </QuestionLayout>
     ),
   },

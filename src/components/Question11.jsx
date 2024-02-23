@@ -3,8 +3,9 @@ import { QuestionLayoutContext } from "./QuestionLayout";
 import Button from "lib/Button";
 import styles from "./Question11.module.css";
 import { useState, useContext } from "react";
+import CardHint from "./CardHint";
 
-function Question11() {
+function Question11({ hint }) {
   const handleMouseIn = () => {
     console.log("in");
   };
@@ -75,6 +76,7 @@ function Question11() {
           );
         })}
       </div>
+      <CardHint hint={hint} />
       <Button
         className={styles["submit-button"]}
         onClick={() =>

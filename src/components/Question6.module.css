@@ -6,12 +6,12 @@
 }
 
 .option {
-  max-width: 350px;
+  max-width: max(30%, 350px);
 }
 
 .option ol {
   margin-top: 0.5rem;
-  line-height: 36px;
+  line-height: 2.5rem;
   list-style-position: inside;
 }
 
@@ -30,6 +30,10 @@
   margin-top: 2rem;
   display: flex;
   flex-flow: column nowrap;
+}
+
+.content-wrapper > button {
+  align-self: center;
 }
 
 .content-wrapper > * + * {

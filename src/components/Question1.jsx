@@ -3,8 +3,9 @@ import { QuestionLayoutContext } from "./QuestionLayout";
 import Button from "lib/Button";
 import styles from "./Question1.module.css";
 import { useContext } from "react";
+import CardHint from "./CardHint";
 
-function Question1() {
+function Question1({ hint }) {
   const options = [
     ["Зимний сад", false],
     ["Михайловский сквер", false],
@@ -49,6 +50,7 @@ function Question1() {
           );
         })}
       </div>
+      <CardHint hint={hint} />
       <Button
         className={styles["submit-button"]}
         onClick={() =>
