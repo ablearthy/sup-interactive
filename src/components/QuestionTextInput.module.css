@@ -27,7 +27,7 @@
 }
 
 .form > button {
-  width: 200px;
+  width: fit-content;
 }
 
 @media (max-width: 768px) or (orientation: portrait) {
