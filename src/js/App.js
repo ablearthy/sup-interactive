@@ -55,7 +55,7 @@ function App() {
 
   return (
     <>
-      {/* <WelcomeScreen /> */}
+      <WelcomeScreen />
       {showFinishScreen && <FinishScreen />}
       <MapContainer
         className="map"
