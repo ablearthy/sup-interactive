@@ -1,0 +1,45 @@
+.buttons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.option {
+  max-width: max(30%, 350px);
+}
+
+.option ol {
+  margin-top: 0.5rem;
+  line-height: 2.5rem;
+  list-style-position: inside;
+}
+
+.toggled,
+.toggled:hover {
+  background: var(--accent-color) !important;
+  color: white !important;
+}
+
+.option > button {
+  width: 100%;
+  background: transparent;
+}
+
+.content-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.content-wrapper > button {
+  align-self: center;
+}
+
+.content-wrapper > * + * {
+  margin-block-start: 1.5rem;
+}
+
+.submit-button {
+  align-self: center;
+}

@@ -1,0 +1,47 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0 18px 48px 26px rgba(0, 0, 0, 0.15);
+  background-color: var(--primary-color);
+  color: var(--fc-light);
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.content {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-content {
+  flex: 1;
+  width: 92vw;
+  max-width: calc(100vw - 2rem);
+  margin: 0 auto;
+  padding-top: 8vh;
+  padding-bottom: 0.5rem;
+  /* height: 100%; */
+}
+
+@media (max-width: 480px) {
+  .inner-content {
+    padding-top: 2rem;
+  }
+}
+
+.bottom-img-wrapper {
+  width: 100%;
+  overflow: clip;
+  flex: 1;
+  min-height: 0;
+  composes: noselect from "lib/commons.module.css";
+}
+
+.bottom-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}

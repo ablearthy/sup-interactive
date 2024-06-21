@@ -1,0 +1,37 @@
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input {
+  outline: 0;
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+  height: 50px;
+  font-size: inherit;
+  max-width: 600px;
+}
+
+.input::placeholder {
+  font-size: inherit;
+}
+
+.form > button {
+  width: fit-content;
+}
+
+@media (max-width: 768px) or (orientation: portrait) {
+  .content-wrapper {
+    margin-top: 2rem;
+  }
+}

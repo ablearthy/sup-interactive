@@ -1,0 +1,31 @@
+.heading {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 3.5rem;
+  composes: noselect from "lib/commons.module.css";
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .title {
+    font-size: 2.1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .title {
+    font-size: 1.7rem;
+  }
+}

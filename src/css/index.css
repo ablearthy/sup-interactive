@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap");
+
+/* CONFIG */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #060f5c;
+  --fs-small: 1rem;
+  --fs-normal: 1.25rem;
+  --fs-large: 1.5rem;
+  --fs-xl: 1.75rem;
+  --fc-light: whitesmoke;
+  --color-dark-btn: #343a40;
+  --color-exit-btn: #636569;
+  --color-exit-press-btn: #38383b;
+  --accent-color: #e64614;
+  --secondary-color: #f3c658;
+}
+
+/* MAIN */
+
+body,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+/* UTILITY */
+
+.subheading {
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow:
+    1px 0 0 white,
+    4px 1px 0 var(--accent-color);
+  color: var(--secondary-color);
+  letter-spacing: 0.15rem;
+  white-space: nowrap;
+}
+
+/* CLASSES */
+
+img {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+/* MEDIA */
+
+@media screen and (min-width: 992px) {
+  .answer__button {
+    font-size: var(--fs-normal);
+  }
+
+  .card__description {
+    padding: 0 3rem !important;
+    height: 25% !important;
+    line-height: 2rem !important;
+  }
+
+  .card__description::-webkit-scrollbar,
+  .question__description::-webkit-scrollbar {
+    opacity: 0 !important;
+    width: 0 !important;
+  }
+
+  .card__header {
+    padding: 1.5rem 1rem 1.5rem !important;
+  }
+
+  .question__answers {
+    margin-top: 0.25rem !important;
+    height: 30% !important;
+    padding: 0 4rem !important;
+  }
+
+  .img__wrapper {
+    height: 35% !important;
+  }
+
+  .welcome__bottom__img__wrapper {
+    height: 45% !important;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .question__answers {
+    height: 30% !important;
+    padding: 1rem 4rem !important;
+  }
+
+  .welcome__p {
+    margin-top: 5em !important;
+  }
+
+  .answer__button {
+    height: 70px !important;
+  }
+}
+
+img {
+  pointer-events: none;
+}
