@@ -1,13 +1,11 @@
 {
   "files": {
-    "main.css": "/sup-interactive/static/css/main.e60135ae.css",
-    "main.js": "/sup-interactive/static/js/main.2f4efff6.js",
+    "main.css": "/sup-interactive/static/css/main.becb7b1a.css",
+    "main.js": "/sup-interactive/static/js/main.0695d8fb.js",
     "static/js/453.a3b4db7c.chunk.js": "/sup-interactive/static/js/453.a3b4db7c.chunk.js",
     "static/media/1.jpg": "/sup-interactive/static/media/1.9d5095ef5c4a050b1a12.jpg",
     "static/media/2.jpg": "/sup-interactive/static/media/2.ee2d4dd8d87707bac805.jpg",
-    "static/media/background.jpg": "/sup-interactive/static/media/background.8a4a1f928ae2958bbb0d.jpg",
     "static/media/map_min.webp": "/sup-interactive/static/media/map_min.f9fd13610f08067417a2.webp",
-    "static/media/fail.jpg": "/sup-interactive/static/media/fail.b8a46d18eeff5741dd35.jpg",
     "static/media/q1.jpg": "/sup-interactive/static/media/q1.c25a68c5f7a022b03197.jpg",
     "static/media/q0.jpg": "/sup-interactive/static/media/q0.3d316498eb5c171fcfd2.jpg",
     "static/media/3.jpg": "/sup-interactive/static/media/3.03d585839a6ea73bd4e7.jpg",
@@ -18,15 +16,14 @@
     "static/media/q2.jpg": "/sup-interactive/static/media/q2.ea724022f0635aaee2ff.jpg",
     "static/media/Kunstkamera.png": "/sup-interactive/static/media/Kunstkamera.d8c2190e4731209fbbf1.png",
     "static/media/Hermitage.png": "/sup-interactive/static/media/Hermitage.a4bc85b1b75a8f361d51.png",
-    "static/media/decoration.svg": "/sup-interactive/static/media/decoration.c52c988ad4622e5bfcab5bbdbc070ce5.svg",
     "static/media/bottomImg.svg": "/sup-interactive/static/media/bottomImg.24cbd5377b5cb2ffe43e6232f8a2c3b7.svg",
     "index.html": "/sup-interactive/index.html",
-    "main.e60135ae.css.map": "/sup-interactive/static/css/main.e60135ae.css.map",
-    "main.2f4efff6.js.map": "/sup-interactive/static/js/main.2f4efff6.js.map",
+    "main.becb7b1a.css.map": "/sup-interactive/static/css/main.becb7b1a.css.map",
+    "main.0695d8fb.js.map": "/sup-interactive/static/js/main.0695d8fb.js.map",
     "453.a3b4db7c.chunk.js.map": "/sup-interactive/static/js/453.a3b4db7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e60135ae.css",
-    "static/js/main.2f4efff6.js"
+    "static/css/main.becb7b1a.css",
+    "static/js/main.0695d8fb.js"
   ]
 }
