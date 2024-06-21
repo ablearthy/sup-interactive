@@ -1,4 +1,3 @@
-import commonStyles from "lib/commons.module.css";
 import styles from "./Question11.module.css";
 
 import QuestionLayout from "./QuestionLayout";

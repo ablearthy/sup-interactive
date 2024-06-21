@@ -8,9 +8,7 @@ import FancyHeader from "lib/FancyHeader";
 import Button from "lib/Button";
 import { CardModalContext } from "lib/card/CardModal";
 import { findNextUnansweredQuestionIndex } from "js/BridgesUtils";
-import { richBridges } from "commons/BridgeMarker";
 import { RootContext } from "js/RootContext";
-import { CardContext } from "lib/card/Card";
 
 function sidebar(images, [isHistShown, setIsHistShown]) {
   return (
@@ -37,7 +35,7 @@ function NextButton() {
     ctx.closeModal();
     const nextIdx = findNextUnansweredQuestionIndex(ctx.idx);
     if (nextIdx !== -1) {
-      const [_, setShowModal] = rootCtx.richBridges[nextIdx].modalState;
+      const [, setShowModal] = rootCtx.richBridges[nextIdx].modalState;
       setTimeout(() => setShowModal(true), 400);
     }
   };
@@ -52,7 +50,6 @@ function QuestionBackCard({
   title,
   histInfo = "",
 }) {
-  const cardCtx = useContext(CardContext);
   const [isHistShown, setIsHistShown] = useState(false);
 
   const wrongAnswerBackContent = (

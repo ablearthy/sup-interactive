@@ -1,8 +1,6 @@
 import QuestionTextInput from "components/QuestionTextInput";
 import QuestionLayout from "components/QuestionLayout";
 
-import commonStyles from "lib/commons.module.css";
-
 import q05img1 from "img/questions/05/1.jpg";
 import q05img2 from "img/questions/05/2.jpg";
 

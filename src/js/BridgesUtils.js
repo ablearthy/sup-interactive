@@ -19,7 +19,7 @@ export function countFinishedBridges() {
 export function findNextUnansweredQuestionIndex(questionIdx) {
   let i = (questionIdx + 1) % bridges.length;
 
-  while (i != questionIdx) {
+  while (i !== questionIdx) {
     if (!isBridgeFinished(bridges[i])) {
       return i;
     }

@@ -1,6 +1,6 @@
 import styles from "./CardModal.module.css";
 import commonStyles from "lib/commons.module.css";
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment } from "react";
 import Modal from "react-overlays/Modal";
 import { createContext, useRef } from "react";
 

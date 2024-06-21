@@ -8,7 +8,7 @@ import Question5 from "components/Question5";
 import Question6 from "components/Question6";
 import Question7 from "components/Question7";
 import Question8 from "components/Question8";
-import Question9 from "components/Question9";
+// import Question9 from "components/Question9";
 import Question10 from "components/Question10";
 import Question11 from "components/Question11";
 import Question12 from "components/Question12";

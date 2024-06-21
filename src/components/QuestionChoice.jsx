@@ -6,12 +6,12 @@ function QuestionChoice(options, toggleClassName = null, multiChoice = false) {
 
   const onClick = (idx) => (e) => {
     const targets = targetsRef.current;
-    setChecked(checked.map((b, i) => (i == idx ? !b : multiChoice && b)));
+    setChecked(checked.map((b, i) => (i === idx ? !b : multiChoice && b)));
 
     if (toggleClassName) {
       e.target.classList.toggle(toggleClassName);
       if (!multiChoice) {
-        for (const [_, t] of targets) {
+        for (const [, t] of targets) {
           t.classList.remove(toggleClassName);
         }
         targets.clear();

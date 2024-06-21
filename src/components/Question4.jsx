@@ -49,12 +49,12 @@ function Content() {
   const ctx = useContext(QuestionLayoutContext);
 
   const cmp = (lhs, rhs) => {
-    if (lhs.length != rhs.length) {
+    if (lhs.length !== rhs.length) {
       return false;
     }
 
     for (var i = 0; i < lhs.length; i++) {
-      if (lhs[i] != rhs[i]) {
+      if (lhs[i] !== rhs[i]) {
         return false;
       }
     }

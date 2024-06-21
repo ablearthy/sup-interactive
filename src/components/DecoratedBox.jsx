@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./DecoratedBox.module.css";
-import decorationSvg from "img/questions/09/decoration.svg";
 
 function DecoratedBox({ children }) {
   const parentRef = useRef(null);
@@ -23,7 +22,7 @@ function DecoratedBox({ children }) {
 
     resizeObserver.observe(parentRef.current);
     return () => resizeObserver.disconnect();
-  }, [parentRef.current]);
+  });
 
   const margin = Math.min(Math.max(0.1 * Math.max(width, height), 40), 100);
   const imgSize = ((0.5 * margin) / 90) * 230;

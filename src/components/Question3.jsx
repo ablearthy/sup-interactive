@@ -10,7 +10,6 @@ import QuestionTextInput from "components/QuestionTextInput";
 import QuestionLayout from "components/QuestionLayout";
 
 import styles from "./Question3.module.css";
-import commonStyles from "lib/commons.module.css";
 
 const rightAnswers = ["подкова", "подковы"];
 const hint = "ранее на Литейном находились кузницы";

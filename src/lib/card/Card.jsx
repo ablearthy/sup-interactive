@@ -1,5 +1,5 @@
 import styles from "./Card.module.css";
-import { useState, createContext } from "react";
+import { createContext } from "react";
 
 export const CardContext = createContext(null);
 

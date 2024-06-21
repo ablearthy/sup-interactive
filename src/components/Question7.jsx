@@ -1,5 +1,3 @@
-import commonStyles from "lib/commons.module.css";
-
 import QuestionTextInput from "components/QuestionTextInput";
 import QuestionLayout from "components/QuestionLayout";
 

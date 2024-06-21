@@ -267,7 +267,7 @@ const dataGen = (ctx, state, setState) => [
 function Content() {
   const qCtx = useContext(QuestionLayoutContext);
   const [state, setState] = useState("intro1");
-  const element = dataGen(qCtx, state, setState).find((e) => e.state == state);
+  const element = dataGen(qCtx, state, setState).find((e) => e.state === state);
   const b = !!element.moveScreen;
 
   return (
