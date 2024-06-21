@@ -1,6 +1,6 @@
 import styles from "./CardModal.module.css";
 import commonStyles from "lib/commons.module.css";
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Modal from "react-overlays/Modal";
 import { createContext, useRef } from "react";
 
@@ -38,6 +38,13 @@ function CardModal({
 }) {
   const questionRef = useRef(null);
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    return () => setIsMounted(false);
+  });
+
   const closeModal = () => {
     setShowModal(false);
     onQuestionSolved && onQuestionSolved();
@@ -53,7 +60,9 @@ function CardModal({
       <Fragment>
         <div
           className={`${styles["question-wrapper"]} ${
-            !disableAnimationOnEnter ? "" : commonStyles.notransition
+            !disableAnimationOnEnter || isMounted
+              ? ""
+              : commonStyles.notransition
           }`}
         >
           <CardModalContext.Provider

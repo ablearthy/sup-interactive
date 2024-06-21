@@ -9,6 +9,7 @@ import Button from "lib/Button";
 import { CardModalContext } from "lib/card/CardModal";
 import { findNextUnansweredQuestionIndex } from "js/BridgesUtils";
 import { RootContext } from "js/RootContext";
+import { CardContext } from "lib/card/Card";
 
 function sidebar(images, [isHistShown, setIsHistShown]) {
   return (
@@ -51,12 +52,13 @@ function QuestionBackCard({
   histInfo = "",
 }) {
   const [isHistShown, setIsHistShown] = useState(false);
+  const cardCtx = useContext(CardContext);
 
   const wrongAnswerBackContent = (
     <div className={styles["back-content"]}>
       <p>Неверно! Попробуйте ещё раз или воспользуйтесь подсказкой!</p>
       <div className={styles["row"]}>
-        <Button>Ещё раз!</Button>
+        <Button onClick={() => cardCtx.setIsFront(true)}>Ещё раз!</Button>
         <NextButton />
       </div>
     </div>
