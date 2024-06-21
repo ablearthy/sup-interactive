@@ -48,7 +48,7 @@ function CardModal({
       className={styles.modal}
       show={showModal}
       onHide={closeModal}
-      // transition={Fade}
+      transition={Fade}
     >
       <Fragment>
         <div

@@ -89,9 +89,7 @@ function QuestionBackCard({
   );
 
   return (
-    <QuestionCardLayout
-      onClick={answerState ? undefined : () => cardCtx.setIsFront(true)}
-    >
+    <QuestionCardLayout>
       <ContentGridLayout
         title={
           <FancyHeader

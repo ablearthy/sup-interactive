@@ -24,15 +24,9 @@ export function QuestionLayout({
 }) {
   const alreadySolved = !!localStorage.getItem(id);
 
-  const [isFront, setIsFront] = useState(true);
-  useEffect(() => {
-    if (alreadySolved) {
-      setIsFront(false);
-    }
-  }, []);
-
+  const [isFront, setIsFront] = useState(!alreadySolved);
   const [answerState, setAnswerState] = useState(alreadySolved);
-
+  console.log(isFront);
   const checkAnswerOnClick = (good) => {
     if (good) {
       localStorage.setItem(id, true);
